@@ -3,7 +3,12 @@ import "./Carousel.css";
 
 export const Carousel = () => {
   const slides = [
-    {
+     {
+ image:"https://www.preprints.org/img/dyn_abstract_figures/2022/01/c8978fdf39f15da60e54a7aa48c72f26/preprints-54552-graphical.v1%20(1).jpg",
+      title: "Peppermint Field Plants",
+      description: "Peppermint Field With Fully Harvested Crops.",
+    },   
+ {
       image: "https://www.agrifarming.in/wp-content/uploads/2020/09/peppermint-3481470_1920.jpg",
       title: "Premium Peppermint Cultivation",
       description: "Naturally grown peppermint for superior quality extracts"
