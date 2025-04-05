@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://raahat-chem-co-um6l.vercel.app/sitemap.xml

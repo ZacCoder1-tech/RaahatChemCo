@@ -40,6 +40,9 @@ export const AboutUs = () => {
         </div>
       </section>
       <Helmet>
+      <title>Premium Essential & Menthol Oils</title>
+  <meta name="description" content="Explore the best essential and menthol oils for health and aromatherapy." />
+  <meta name="keywords" content="Essential Oils, Menthol Oils, Aromatherapy, Natural Oils, Organic Oils" />
         <script type="application/ld+json">
           {JSON.stringify(businessSchema)}
         </script>
