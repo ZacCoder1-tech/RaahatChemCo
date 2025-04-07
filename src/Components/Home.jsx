@@ -179,9 +179,9 @@ export function Home() {
         <div className="testimonial">
           <img src={img3} alt="DIRECTOR" />
           <h4>Mr. Mohd Zubair</h4>
-          <p>(Director of Raahat Chemicals)</p>
+          <p>(Director of Rahat Chemicals)</p>
           <p>
-            As an experienced manufacturer in the aromatic and chemicals industry, Raahat Chemicals PVT.LTD has been 
+            As an experienced manufacturer in the aromatic and chemicals industry, Rahat Chemicals PVT.LTD has been 
             at the forefront of producing high-quality, custom chemicals for over 24 years. Our expertise spans across 
             the creation and formulation of a wide range of chemical compounds, essential oils, and specialty chemicals. 
             We have built a reputation for precision, innovation, and reliability, serving industries such as fragrance, 
