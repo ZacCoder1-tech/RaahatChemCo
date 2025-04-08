@@ -13,7 +13,7 @@ export const Header = () => {
         <div className="top-bar">
           <h1 className="logo">Rahat Chemicals</h1>
           
-          <div className="contact-info">
+          <div className="contact-info1">
             <div className="contact-item">
               <FaMapMarkerAlt className="nav-icon" />
               <span>Area Nagran, Near Jama Masjid, Budaun (243601), UP</span>
