@@ -1,130 +1,131 @@
 /* Header.css */
+
+/* Base Styles */
 .header {
-  background: #f8f9fa;
-  border-bottom: 1px solid #e9ecef;
-  padding: 0.5rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  background: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 1rem 0;
 }
 
-/* Top Navigation Bar */
-.navbar:first-child {
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Top Bar (Contact Info + Logo) */
+.top-bar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 5%;
-  max-width: 1200px;
-  margin: 0 auto;
+  margin-bottom: 1rem;
 }
 
-.nav-left .logo {
-  color: #2b2d42;
+.logo {
   font-size: 1.8rem;
-  font-weight: 600;
-  margin: 0;
+  color: #333;
+  font-weight: bold;
 }
 
-.nav-right {
+.contact-info {
   display: flex;
   gap: 2rem;
   align-items: center;
 }
 
-.nav-item {
+.contact-item {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #4a4a4a;
-  font-size: 0.95rem;
+  color: #666;
 }
 
-.nav-icon {
-  color: #2a9d8f;
-  font-size: 1.1rem;
-}
-
-/* Main Navigation Menu */
-.navbar:last-child {
-  border-top: 1px solid #dee2e6;
-  margin-top: 0.5rem;
-  padding: 1rem 0;
+/* Main Navigation */
+.main-nav {
+  display: flex;
+  justify-content: center;
 }
 
 .nav-list {
   display: flex;
-  justify-content: center;
   gap: 2rem;
   list-style: none;
   padding: 0;
-  margin: 0 auto;
-  max-width: 1200px;
+  margin: 0;
 }
 
 .nav-link {
-  color: #495057;
+  color: #333;
   text-decoration: none;
-  font-weight: 500;
-  padding: 0.5rem;
-  transition: color 0.2s ease;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  padding: 0.5rem 1rem;
 }
 
-.nav-link.active {
-  color: #2a9d8f;
-  border-bottom: 2px solid #2a9d8f;
+.nav-link:hover {
+  color: #007bff;
 }
 
-/* Responsive Design */
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Mobile Styles */
 @media (max-width: 768px) {
-  .navbar:first-child {
+  .top-bar {
     flex-direction: column;
     gap: 1rem;
     text-align: center;
   }
 
-  .nav-right {
+  .contact-info {
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 1rem;
   }
 
-  .nav-item {
-    justify-content: center;
+  .main-nav {
+    display: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-nav.active {
+    display: block;
   }
 
   .nav-list {
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 1rem;
-    padding: 0 1rem;
+    padding: 1rem 0;
   }
 
-  .nav-link {
-    font-size: 0.9rem;
+  .mobile-menu-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .logo {
+    margin-bottom: 1rem;
   }
 }
 
 @media (max-width: 480px) {
-  .nav-item span {
-    font-size: 0.85rem;
+  .logo {
+    font-size: 1.4rem;
   }
 
-  #fs-2 {
-    max-width: 200px;
+  .contact-item span {
+    font-size: 0.9rem;
   }
 
-  .nav-list {
-    gap: 0.5rem;
+  .nav-link {
+    font-size: 1rem;
   }
-}
-
-/* Phone Number Separator */
-.nav-item span + span::before {
-  content: "|";
-  margin: 0 0.5rem;
-  color: #adb5bd;
-}
-
-/* Address Styling */
-#fs-2 {
-  font-size: 0.9rem;
-  line-height: 1.4;
 }

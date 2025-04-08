@@ -1,40 +1,51 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
-import "./Header.css"; // Create this CSS file
-import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
-
+import "./Header.css";
+import { FaMapMarkerAlt, FaPhoneAlt, FaBars, FaTimes } from "react-icons/fa";
 
 export const Header = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <header className="header">
-       <nav className="navbar">
-      <div className="nav-left">
-        <h1 className="logo">Rahat Chemicals</h1>
-      </div>
-      <div className="nav-right">
-        <div className="nav-item">
-          <FaMapMarkerAlt className="nav-icon" />
-          <span id='fs-2'> Area Nagran , Near Jama Masjid , Budaun (243601), Uttar Pradesh</span>
+      <nav className="navbar">
+        {/* Top Bar with Contact Info */}
+        <div className="top-bar">
+          <h1 className="logo">Rahat Chemicals</h1>
+          
+          <div className="contact-info">
+            <div className="contact-item">
+              <FaMapMarkerAlt className="nav-icon" />
+              <span>Area Nagran, Near Jama Masjid, Budaun (243601), UP</span>
+            </div>
+            <div className="contact-item">
+              <FaPhoneAlt className="nav-icon" />
+              <span>+91 89236 97291</span>
+              <span>+91 79839 05205</span>
+            </div>
+          </div>
+
+          <button 
+            className="mobile-menu-toggle"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
+          </button>
         </div>
-        <div className="nav-item">
-          <FaPhoneAlt className="nav-icon" />
-          <span>+91 89236 97291</span>|
-          <span>+91 79839 05205</span>
-        </div>
-      </div>
-    </nav>
-      <nav className="navbar" style={{width:'55%',marginLeft:'23%'}}>
-        <div className="nav-menu">
+
+        {/* Main Navigation */}
+        <div className={`main-nav ${isMobileMenuOpen ? "active" : ""}`}>
           <ul className="nav-list">
-            <li className="nav-item">
-              <Link to="/" className="nav-link active">Home</Link>
+            <li>
+              <Link to="/" className="nav-link">Home</Link>
             </li>
-            <li className="nav-item">
+            <li>
               <Link to="/product" className="nav-link">Products</Link>
             </li>
-            <li className="nav-item">
+            <li>
               <Link to="/Infrastructure" className="nav-link">Infrastructure</Link>
             </li>
-            <li className="nav-item">
+            <li>
               <Link to="/AboutUs" className="nav-link">About Us</Link>
             </li>
           </ul>
