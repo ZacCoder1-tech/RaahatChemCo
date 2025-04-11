@@ -5,84 +5,67 @@ body {
   padding: 0;
   background-color: #f9f9f9;
 }
+
 .Images3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-  padding: 20px;
-  max-width: 1000px;
-  margin: auto;
+  gap: 20px;
+  padding: 2rem;
+  background-color: #f5f5f5;
 }
 
 .image-container {
   position: relative;
-  border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover {
+  transform: scale(1.02);
 }
 
 .image-container img {
   width: 100%;
   height: 100%;
+  display: block;
+  transition: transform 0.3s ease;
   object-fit: cover;
-  transition: transform 0.3s ease-in-out;
-}
-
-.image-container:hover img {
-  transform: scale(1.1);
 }
 
 .overlay {
   position: absolute;
   bottom: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding-bottom: 15px;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.image-container:hover .overlay {
-  opacity: 1;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+  text-align: left;
+  pointer-events: none;
 }
 
 .image-text {
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 8px 12px;
-  border-radius: 8px;
-  backdrop-filter: blur(5px);
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .Images3 {
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 10px;
-  }
-
-  .image-text {
-      font-size: 14px;
-  }
-}
-
+/* Optional: Tweak for small screens */
 @media (max-width: 480px) {
   .Images3 {
-      grid-template-columns: 1fr; /* Stack images */
+    padding: 1rem;
+    gap: 16px;
   }
 
   .image-text {
-      font-size: 12px;
+    font-size: 1rem;
+  }
+
+  .overlay {
+    padding: 0.75rem;
   }
 }
-
 
 /* Hero Section */
 .hero-section {

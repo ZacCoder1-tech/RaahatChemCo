@@ -26,7 +26,7 @@ export const Footer = () => {
           <ul className="contact-info">
             <li>📞+91 89236 97291 </li>
             <li>📞+91 79839 05205 </li>
-            <li>📧 Zyansheikh786@gmail.com</li>
+            <li>📧 Zyansheikh123@gmail.com</li>
             <li>🏢 Area Nagran , Near Jama Masjid , Budaun (243601), Uttar Pradesh</li>
           </ul>
         </div>

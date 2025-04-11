@@ -1,6 +1,7 @@
 import img3 from './img3.jpg';
 import img12 from './img12.jpg'
 import img14 from './img14.jpg'
+import img15 from './img15.jpg'
 import { Helmet } from 'react-helmet-async';
 import { Carousel } from './Carousel';
 import './home.css';
@@ -149,8 +150,13 @@ export function Home() {
             <span className="image-text">🍃 Manufacturing and Processing</span>
         </div>
     </div>
+    <div className="image-container" >
+        <img src={img15} alt=""/>
+        <div className="overlay">
+            <span className="image-text">🍃 Manufacturing and Processing</span>
+        </div>
+    </div>
 </div>
-
 
       <section className="expertise-section">
         <div className="expertise-content">
